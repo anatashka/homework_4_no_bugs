@@ -40,9 +40,10 @@ public class switch_problems {
         if (operation == '/') {
             if (b != 0) {
                 result = (int) a / b;
-            } else
+            } else {
                 System.out.println("Attempt to divide on 0!!!");
                 result = 0;
+            }
         }
         System.out.print(a);
         System.out.print(operation);

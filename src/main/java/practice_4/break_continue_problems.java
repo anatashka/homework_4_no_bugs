@@ -7,7 +7,8 @@ public class break_continue_problems {
     public static void main(String[] args) {
         //sumPositive();
         //printSomeNumbers();
-        waitForStop();
+        //waitForStop();
+        printOnlyPositive();
     }
 
     // 4. Ввод строк до команды "stop" (использовать break)
@@ -24,10 +25,15 @@ public class break_continue_problems {
     // 3. Вывод только положительных чисел (использовать continue)
     public static void printOnlyPositive(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter some numbers: ");
-        String line = scanner.nextLine();
+        double num;
+        do {
+            System.out.print("Enter any number: ");
+            num = scanner.nextDouble();
 
-
+            if (num > 0) System.out.println("You entered positive number: " + num);
+            if (num < 0) continue;
+        }
+        while (num !=0);
     }
 
     // 2. Пропуск чисел, делящихся на 3 (использовать continue)

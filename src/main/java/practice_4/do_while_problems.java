@@ -21,13 +21,13 @@ public class do_while_problems {
         int num = numScanner.nextInt();
         int digits = 0;
         do {
-            if (num > 1) {
+            if (num != 0) {
                 num = (int) num/10;
                 digits++;
             }
             else digits++;
         }
-        while (num>1);
+        while (num!=0);
 
         System.out.println("There are " + digits + " digits.");
     }
