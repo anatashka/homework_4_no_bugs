@@ -1,0 +1,21 @@
+package practice_6_collections.a_tasks_from_practika.taskManager;
+
+import java.util.Date;
+
+public class Task {
+    private String name;
+    private Date date;
+
+    public Task(String name, Date date) {
+        this.name = name;
+        this.date = date;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+}
