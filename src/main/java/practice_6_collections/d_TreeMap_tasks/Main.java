@@ -4,9 +4,16 @@ import practice_6_collections.b_linkedList_tasks.Task_b5;
 
 public class Main {
     public static void main(String[] args) {
+        Task_d33 task_d = new Task_d33();
+        task_d.createEmployee();
+        task_d.searchHigherID(150);
+        task_d.searchHigherID(750);
+        task_d.searchHigherID(350);
+
+        /*
         Task_d32 task_d = new Task_d32();
         task_d.createGradesTreeMap();
-        task_d.showMinMax();
+        task_d.showMinMax(); */
 
         //task_d.printSorted();
     }
