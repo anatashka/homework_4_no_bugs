@@ -1,22 +1,22 @@
 package practice_6_collections.z_tasks;
 
-import java.util.LinkedList;
+import java.util.Stack;
 
 public class Task_7 {
-    LinkedList<String> symbols = new LinkedList<>();
+    Stack<Character> symbols = new Stack<>();
 
     // correct sequences: {()}
     // in// correct sequences: {(}
     public boolean checkSequence(String sequence){
         for (int i = 0; i<sequence.length(); i++) {
-            char symbol = sequence[i];
+            char symbol = sequence.charAt(i);
 
-            if ((symbol == "(") || (symbol == "{") || (symbol == "[") || (symbol == "<"))
-                symbols.add(symbol);
-            if ((symbol == ")") & symbols.getLast().equals("(")) symbols.removeLast();
-            if ((symbol == "}") & symbols.getLast().equals("{")) symbols.removeLast();
-            if ((symbol == ">") & symbols.getLast().equals("<")) symbols.removeLast();
-            if ((symbol == "]") & symbols.getLast().equals("[")) symbols.removeLast();
+            if (symbol == '(' || symbol == '{' || symbol == '[' || symbol == '<')
+                symbols.push(symbol);
+            if ((symbol == ')' || symbol == '}' || symbol == '>' || symbol == ']') & symbols.isEmpty())
+                return false;
+            if (((symbol == ')') & symbols.getLast().equals('(')) || ((symbol == '}') & symbols.getLast().equals('{')) || ((symbol == '>') & symbols.getLast().equals('<')) || ((symbol == ']') & symbols.getLast().equals('[')))
+                symbols.removeLast();
         }
         if (symbols.isEmpty()) return true;
         else

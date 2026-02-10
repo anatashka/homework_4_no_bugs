@@ -5,7 +5,8 @@ import practice_6_collections.b_linkedList_tasks.Task_b5;
 public class Main {
     public static void main(String[] args) {
         Task_7 sequence = new Task_7();
-        System.out.println("Entered sequence <[]> is correct: " + sequence.checkSequence("<[]>"));
+        String checkLine = "({)}";
+        System.out.println("Entered sequence " + checkLine + " is correct: " + sequence.checkSequence(checkLine));
 
         /*Task_6_phoneBook phoneBook = new Task_6_phoneBook();
        phoneBook.addContact("aaa","1111111");
