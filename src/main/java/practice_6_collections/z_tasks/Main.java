@@ -8,6 +8,16 @@ public class Main {
         String checkLine = "({)}";
         System.out.println("Entered sequence " + checkLine + " is correct: " + sequence.checkSequence(checkLine));
 
+        String checkLine2 = "({})";
+        System.out.println("Entered sequence " + checkLine2 + " is correct: " + sequence.checkSequence(checkLine2));
+
+        String checkLine3 = ")({})";
+        System.out.println("Entered sequence " + checkLine3 + " is correct: " + sequence.checkSequence(checkLine3));
+
+        String checkLine4 = "{}<({})>";
+        System.out.println("Entered sequence " + checkLine4 + " is correct: " + sequence.checkSequence(checkLine4));
+
+
         /*Task_6_phoneBook phoneBook = new Task_6_phoneBook();
        phoneBook.addContact("aaa","1111111");
        phoneBook.addContact("bbb", "222222");

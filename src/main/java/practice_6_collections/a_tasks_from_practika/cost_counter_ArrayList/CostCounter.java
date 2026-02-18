@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CostCounter {
     // array, where i - is number of month
-    private ArrayList<Double> costsPerMonth = new ArrayList<>();
+    ArrayList<Double> costsPerMonth = new ArrayList<>();
 
     public void addCosts(Double costs){
         costsPerMonth.add(costs);
@@ -17,10 +17,10 @@ public class CostCounter {
     // find the least money spent
     public Double minCostsPerMonth() {
         Double min = costsPerMonth.getFirst();
-        for (int i = 1; i <= 12; i++){
+        for (int i = 1; i <= costsPerMonth.size(); i++){
             System.out.println(i + " : $" + costsPerMonth.get(i-1));
         }
-        for (int i = 1; i < 12; i++){
+        for (int i = 1; i < costsPerMonth.size(); i++){
             if (costsPerMonth.get(i) < min){
                 min = costsPerMonth.get(i);
             }

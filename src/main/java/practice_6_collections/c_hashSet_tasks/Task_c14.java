@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Task_c14 {
-    private HashSet namesHashSet = new HashSet();
+    private HashSet<String> namesHashSet = new HashSet();
     private String[] namesList = {"Grace","Quinn","Kate","Joyce","May","Mei","Anne","Nick","Zayne","Finn","Fred","James","Rome","Kane","Elle","Rae","Jude","Sage","Nata"};
 
     public void createNamesHashset(Integer count){

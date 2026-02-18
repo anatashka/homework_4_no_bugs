@@ -16,7 +16,8 @@ public class PhotoEditor {
 
     //delete last action
     public void undoLastAction(){
-        actions.pop();
+        if (!actions.isEmpty())
+            actions.pop();
     }
 
     public void printActions(){

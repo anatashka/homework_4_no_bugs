@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Task_c13 {
-    public HashSet convertListToSet(List<String> list){
+    public HashSet<String> convertListToSet(List<String> list){
         HashSet<String> set = new HashSet<>();
 
         for (String string : list){

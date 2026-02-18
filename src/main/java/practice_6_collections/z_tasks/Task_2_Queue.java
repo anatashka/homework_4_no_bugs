@@ -11,6 +11,7 @@ public class Task_2_Queue {
     }
 
     public void executeTask(){
-        System.out.println("Task (" + tasks.removeFirst() + ") is executed and removed from the list");
+        if (!tasks.isEmpty())
+            System.out.println("Task (" + tasks.removeFirst() + ") is executed and removed from the list");
     }
 }
