@@ -7,16 +7,17 @@ package practice_9_multithreads;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CounterWithSichronized {
-    private static int counter = 0;
+
     public static void main(String[] args) throws InterruptedException{
+        Count count = new Count();
         Thread thread1 = new Thread(() -> {
             for (int i = 0; i<1000; i++) {
-                counter ++ ;
+               count.increment();
             }
         });
         Thread thread2 = new Thread(() -> {
             for (int i = 0; i<1000; i++) {
-                counter ++ ;
+                count.increment();
             }
         });
         thread1.start();
@@ -24,6 +25,6 @@ public class CounterWithSichronized {
 
         thread1.join();
         thread2.join();
-        System.out.println("Counter = " + counter);
+        System.out.println("Counter = " + count.getCount());
     }
 }
