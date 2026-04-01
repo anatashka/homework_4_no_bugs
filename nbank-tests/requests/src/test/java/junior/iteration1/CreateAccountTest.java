@@ -1,9 +1,10 @@
-package iteration1;
+package junior.iteration1;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -66,14 +67,16 @@ public class CreateAccountTest {
                     .statusCode(HttpStatus.SC_CREATED);
 
             //check that account is really created
-            given()
+            Response kate_account = given()
                     .header("Authorization", userAuthHeader)
                     .contentType(ContentType.JSON)
                     .accept(ContentType.JSON)
                     .post("http://localhost:4111/api/v1/accounts")
                     .then()
                     .assertThat()
-                    .statusCode(HttpStatus.SC_CREATED);
+                    .statusCode(HttpStatus.SC_CREATED)
+                    .extract().response();
+
         }
 
 }
